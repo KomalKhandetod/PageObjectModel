@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Elevate K-12 Application Test Automation Suit</th></tr>
+<tr><td><a href="#t0">Elevate K-12 Test Cases</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">207,787</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Elevate K-12 Application Test Automation Suit</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Elevate K-12 Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.elevate.qa.testCases.LMSDashboardTest</td><td><a href="#m0">verifyProgramClickTest</a></td><td rowspan="1">1597477415131</td><td rowspan="1">120424</td></tr><tr><th colspan="4">Elevate K-12 Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.elevate.qa.testCases.LMSDashboardTest</td><td><a href="#m1">verifyLMSDashboardTitleTest</a></td><td rowspan="1">1597477380587</td><td rowspan="1">23</td></tr><tr class="passedeven"><td><a href="#m2">verifyTechCheckUtilityClickTest</a></td><td rowspan="1">1597477396338</td><td rowspan="1">3396</td></tr><tr class="passedodd"><td rowspan="3">com.elevate.qa.testCases.LoginPageTest</td><td><a href="#m3">adminLoginTest</a></td><td rowspan="1">1597477360039</td><td rowspan="1">5109</td></tr><tr class="passedodd"><td><a href="#m4">elevateLogoTest</a></td><td rowspan="1">1597477349407</td><td rowspan="1">99</td></tr><tr class="passedodd"><td><a href="#m5">loginPageTitleTest</a></td><td rowspan="1">1597477339198</td><td rowspan="1">38</td></tr></tbody>
+</table>
+<h2>Elevate K-12 Test Cases</h2><h3 id="m0">com.elevate.qa.testCases.LMSDashboardTest#verifyProgramClickTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-3M04LF7&apos;, ip: &apos;192.168.43.160&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\komal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57932}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 989634fbc63d634d0a507a672098e4bc
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.elevate.qa.util.TestUtil.expicitWaitVisibilityOfAllElements(TestUtil.java:37)
+	at com.elevate.qa.pages.LMSDashboard.clickOnProgramLink(LMSDashboard.java:68)
+	at com.elevate.qa.testCases.LMSDashboardTest.verifyProgramClickTest(LMSDashboardTest.java:54)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.elevate.qa.testCases.LMSDashboardTest#verifyLMSDashboardTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.elevate.qa.testCases.LMSDashboardTest#verifyTechCheckUtilityClickTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.elevate.qa.testCases.LoginPageTest#adminLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.elevate.qa.testCases.LoginPageTest#elevateLogoTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.elevate.qa.testCases.LoginPageTest#loginPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
