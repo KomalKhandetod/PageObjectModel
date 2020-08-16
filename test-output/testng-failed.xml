@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Elevate K-12 Application Test Automation Suit]">
-  <listeners>
-    <listener class-name="com.elevate.qa.ExtentReportListener.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="Elevate K-12 Test Cases(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.elevate.qa.testCases.LMSDashboardTest">
+      <class name="com.elevate.qa.testCases.TechCheckReportsPageTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyProgramClickTest"/>
+          <include name="VerifySwitchPortalClickTest"/>
         </methods>
-      </class> <!-- com.elevate.qa.testCases.LMSDashboardTest -->
+      </class> <!-- com.elevate.qa.testCases.TechCheckReportsPageTest -->
     </classes>
-  </test> <!-- Elevate K-12 Test Cases(failed) -->
-</suite> <!-- Failed suite [Elevate K-12 Application Test Automation Suit] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
