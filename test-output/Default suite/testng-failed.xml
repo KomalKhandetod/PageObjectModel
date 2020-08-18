@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.elevate.qa.extentReport.ExtentReportListner">
+      <class name="com.elevate.qa.testCases.TechCheckReportsPageTest">
         <methods>
-          <include name="skipTest"/>
-          <include name="failTest"/>
-          <include name="endReport"/>
-          <include name="getResult"/>
-          <include name="startReport"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="VerifySwitchPortalClickTest"/>
         </methods>
-      </class> <!-- com.elevate.qa.extentReport.ExtentReportListner -->
+      </class> <!-- com.elevate.qa.testCases.TechCheckReportsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
