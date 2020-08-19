@@ -47,7 +47,7 @@ public class LMSDashboard extends TestBase {
 		try {
 			for(int i=0;i<=HomeMenuSize;i++) {
 				String HomeMenuItem = HomeMenuList.get(i).getText();
-				if(HomeMenuItem.equalsIgnoreCase("Tech Check Utility")) {
+				if(HomeMenuItem.equalsIgnoreCase("Falcon")) {
 					HomeMenuList.get(i).click();
 					break;
 				}
