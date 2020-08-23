@@ -46,4 +46,16 @@ public class TestUtil extends TestBase {
 		 
 	}
 	
+	public void printTextFromTable(List <WebElement> List) {
+		
+		try {
+			for(int i=0;i<List.size();i++) {
+				String ListItem = List.get(i).getText();
+				System.out.println(ListItem);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

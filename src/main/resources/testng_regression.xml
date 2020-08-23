@@ -11,6 +11,7 @@
     <classes>
     <class name="com.elevate.qa.testCases.LoginPageTest"/>
     <class name="com.elevate.qa.testCases.LMSDashboardTest"/>
+    <class name="com.elevate.qa.testCases.ProgramsPageTest"/>
     </classes>
   </test> 
 </suite>

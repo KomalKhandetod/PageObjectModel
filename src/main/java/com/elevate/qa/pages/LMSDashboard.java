@@ -36,6 +36,53 @@ public class LMSDashboard extends TestBase {
 		return driver.getTitle();
 	}
 	
+	public LMSDashboard clickOnHomeLink() {
+		
+		TestUtil.expicitWaitVisibilityOfElement(driver, HomeMenu, 30);
+		TestUtil.hoverOnItem(HomeMenu);
+		
+		int HomeMenuSize = HomeMenuList.size();
+		TestUtil.expicitWaitVisibilityOfAllElements(driver, HomeMenuList, 30);
+		
+		try {
+			for(int i=0;i<=HomeMenuSize;i++) {
+				String HomeMenuItem = HomeMenuList.get(i).getText();
+				if(HomeMenuItem.equalsIgnoreCase("Home")) {
+					HomeMenuList.get(i).click();
+					break;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return new LMSDashboard();
+	}
+	
+	public GenesisHomePage clickOnGenesisLink() {
+		
+		TestUtil.expicitWaitVisibilityOfElement(driver, HomeMenu, 30);
+		TestUtil.hoverOnItem(HomeMenu);
+		
+		int HomeMenuSize = HomeMenuList.size();
+		TestUtil.expicitWaitVisibilityOfAllElements(driver, HomeMenuList, 30);
+		
+		try {
+			for(int i=0;i<=HomeMenuSize;i++) {
+				String HomeMenuItem = HomeMenuList.get(i).getText();
+				if(HomeMenuItem.equalsIgnoreCase("Genesis")) {
+					HomeMenuList.get(i).click();
+					break;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return new GenesisHomePage();
+	}
+	
+	
 	public TechCheckReportsPage clickOnTechCheckLink() {
 		
 		TestUtil.expicitWaitVisibilityOfElement(driver, HomeMenu, 30);

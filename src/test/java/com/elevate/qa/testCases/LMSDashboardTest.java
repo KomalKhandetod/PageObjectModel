@@ -27,9 +27,6 @@ public class LMSDashboardTest extends TestBase{
 	public void setup() {
 		initialization();
 		LoginPage = new LoginPage();
-		TechCheckReportsPage = new TechCheckReportsPage();
-		ProgramsPage = new ProgramsPage();
-		//TestUtil = new TestUtil();
 		LMSDashboard = LoginPage.adminLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
@@ -41,6 +38,20 @@ public class LMSDashboardTest extends TestBase{
 	}
 	
 	@Test(priority=2)
+	public void verifyHomeClickTest() {
+		LMSDashboard.clickOnHomeLink();
+		String HomePageTitle = driver.getTitle();
+		Assert.assertEquals(HomePageTitle, "DailySessions");
+	}
+	
+	@Test(priority=3)
+	public void verifyGenesisClickTest() {
+		LMSDashboard.clickOnGenesisLink();
+		String GenesisPageTitle = driver.getTitle();
+		Assert.assertEquals(GenesisPageTitle, "Elevate K12");
+	}
+	
+	@Test(priority=4)
 	public void verifyTechCheckUtilityClickTest() {
 		
 		LMSDashboard.clickOnTechCheckLink();
@@ -48,7 +59,7 @@ public class LMSDashboardTest extends TestBase{
 		Assert.assertEquals(TechCheckTitle, "FalconWeb", "Tech Check Click Failed");
 	}
 	
-	@Test(priority=3)
+	@Test(priority=5)
 	public void verifyProgramClickTest() {
 		
 		LMSDashboard.clickOnProgramLink();

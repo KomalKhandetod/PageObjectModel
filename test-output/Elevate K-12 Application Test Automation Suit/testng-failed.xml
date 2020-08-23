@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Elevate K-12 Application Test Automation Suit]">
+<suite name="Failed suite [Elevate K-12 Application Test Automation Suit]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.elevate.qa.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
@@ -9,8 +9,9 @@
       <class name="com.elevate.qa.testCases.LMSDashboardTest">
         <methods>
           <include name="setup"/>
+          <include name="verifyHomeClickTest"/>
           <include name="tearDown"/>
-          <include name="verifyProgramClickTest"/>
+          <include name="verifyTechCheckUtilityClickTest"/>
         </methods>
       </class> <!-- com.elevate.qa.testCases.LMSDashboardTest -->
     </classes>
