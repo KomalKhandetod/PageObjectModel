@@ -9,7 +9,6 @@
       <class name="com.elevate.qa.testCases.LMSDashboardTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyHomeClickTest"/>
           <include name="tearDown"/>
           <include name="verifyTechCheckUtilityClickTest"/>
         </methods>

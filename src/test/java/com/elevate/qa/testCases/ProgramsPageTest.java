@@ -52,7 +52,7 @@ public class ProgramsPageTest extends TestBase{
 	}
 	
 	@Test(priority=4)
-	public void enterProgramListToExcel() {
+	public void verifyEnterProgramListToExcelTest() {
 		lMSDashboard.clickOnProgramLink();
 		programsPage.readProgramListExcel();
 	}

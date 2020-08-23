@@ -22,6 +22,8 @@ public class TestUtil extends TestBase {
 	public static final long IMPLICIT_WAIT = 30;
 	public static final long EXPLICIT_WAIT = 30;
 	
+	Xls_Reader reader = new Xls_Reader("C:\\Users\\komal\\eclipse-workspace\\POMFunctional\\src\\main\\java\\com\\elevate\\qa\\testData\\ProgramList.xlsx");
+	
 	public void hoverOnItem(WebElement MenuLocation) {
 		Actions act = new Actions(driver);
 		act.moveToElement(MenuLocation).build().perform();
@@ -58,4 +60,46 @@ public class TestUtil extends TestBase {
 		}
 	}
 	
+	public void copyTableDataToExcel(int index, List <WebElement> List, String SheetName, String ColumnName1, String ColumnName2) {
+				
+		if(!(reader.isSheetExist(SheetName)==true)) {
+			reader.addSheet(SheetName);
+			reader.addColumn(SheetName, ColumnName1);
+			reader.addColumn(SheetName, ColumnName2);
+		}else {
+			reader.removeColumn(SheetName, 0);
+			reader.removeColumn(SheetName, 1);
+			reader.addColumn(SheetName, ColumnName1);
+			reader.addColumn(SheetName, ColumnName2);
+		}
+		
+		try {
+			for(int i=2; i<=List.size(); i++) {
+				
+				String ListItem = List.get(index).getText();
+				System.out.println(ListItem);
+				reader.setCellData(SheetName, ColumnName1, i, ListItem);
+				index++;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+public void copyTableDataToExcel2(int j, int NewProgSize, int index, List <WebElement> List, String SheetName, String ColumnName1, String ColumnName2) {
+		
+		try {
+			for(int i=j; i<=NewProgSize; i++) {
+				
+				String ListItem = List.get(index).getText();
+				System.out.println(ListItem);
+				reader.setCellData(SheetName, ColumnName1, i, ListItem);
+				index++;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
