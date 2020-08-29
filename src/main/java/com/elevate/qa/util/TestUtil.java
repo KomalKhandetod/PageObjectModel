@@ -4,6 +4,7 @@ package com.elevate.qa.util;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.elevate.qa.Base.TestBase;
@@ -82,12 +84,11 @@ public class TestUtil extends TestBase {
 				index++;
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-public void copyTableDataToExcel2(int j, int NewProgSize, int index, List <WebElement> List, String SheetName, String ColumnName1, String ColumnName2) {
+	public void copyTableDataToExcel2(int j, int NewProgSize, int index, List <WebElement> List, String SheetName, String ColumnName1, String ColumnName2) {
 		
 		try {
 			for(int i=j; i<=NewProgSize; i++) {
@@ -98,8 +99,23 @@ public void copyTableDataToExcel2(int j, int NewProgSize, int index, List <WebEl
 				index++;
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
+	/*
+	 * public void sendKeys(WebElement textBox) { textBox.sendKeys(""); }
+	 */
+	
+	public static int randomNumberGenerator() {
+		Random random = new Random();
+		int randomNumber = random.nextInt(1000);
+		return randomNumber;
+	}
+
+	public static void selectDropdown(WebElement DropdownName, String optionValue) {
+		Select select = new Select(DropdownName);
+		select.selectByVisibleText(optionValue);
+	}
+
 }

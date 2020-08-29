@@ -19,11 +19,17 @@ public class LMSDashboard extends TestBase {
 	@FindBy(xpath="//a[contains(text(),'Projects')]")
 	WebElement ProjectsMenu;
 	
+	@FindBy(xpath="//a[contains(text(),'Entities')]")
+	WebElement EntitiesMenu;
+	
 	@FindBy(xpath="//div[@id='menu']/ul/li[1]/ul/li/a")
 	List <WebElement> HomeMenuList;
 	
 	@FindBy(xpath="//div[@id='menu']/ul/li[4]//ul/li/a")
 	List <WebElement> ProjectMenuList;
+	
+	@FindBy(xpath="//div[@id='menu']/ul/li[2]/ul/li/a")
+	List <WebElement> EntitiesMenuList;
 	
 	
 	//Initializing Page Objects
@@ -122,5 +128,28 @@ public class LMSDashboard extends TestBase {
 				}
 			}
 		return new ProgramsPage();
+	}
+	
+public SchoolsPage clickOnSchoolLink() {
+		
+		TestUtil.expicitWaitVisibilityOfElement(driver, EntitiesMenu, 30);
+		TestUtil.hoverOnItem(EntitiesMenu);
+		
+		int HomeMenuSize = EntitiesMenuList.size();
+		TestUtil.expicitWaitVisibilityOfAllElements(driver, EntitiesMenuList, 30);
+		
+		try {
+			for(int i=0;i<=HomeMenuSize;i++) {
+				String HomeMenuItem = EntitiesMenuList.get(i).getText();
+				if(HomeMenuItem.equalsIgnoreCase("Schools")) {
+					EntitiesMenuList.get(i).click();
+					break;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return new SchoolsPage();
 	}
 }
