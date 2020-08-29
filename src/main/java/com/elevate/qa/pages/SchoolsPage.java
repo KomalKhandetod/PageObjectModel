@@ -52,6 +52,11 @@ public class SchoolsPage extends TestBase {
 		return new AddNewSchoolPage();
 	}
 	
+	public void createNewSchoolClick() {
+		testUtil.expicitWaitVisibilityOfElement(driver, AddSchool, 30);
+		AddSchool.click();
+	}
+	
 	public String searchSchoolByName(String SchoolName) throws InterruptedException {
 		lMSDashboard.clickOnSchoolLink();
 		testUtil.expicitWaitVisibilityOfElement(driver, SchoolNameSearch, 30);

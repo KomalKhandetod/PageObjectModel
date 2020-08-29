@@ -56,6 +56,15 @@ public class AddNewSchoolPage extends TestBase{
 	@FindBy(id="cancel")
 	WebElement CancelButton;
 	
+	@FindBy(xpath="//span[@htmlfor='Code']")
+	WebElement CodeError;
+	
+	@FindBy(xpath="//span[@htmlfor='Name']")
+	WebElement NameError;
+	
+	@FindBy(xpath="//span[@htmlfor='ddState']")
+	WebElement StateError;
+	
 	
 	public AddNewSchoolPage() {
 		PageFactory.initElements(driver, this);
@@ -73,19 +82,47 @@ public class AddNewSchoolPage extends TestBase{
 		Abbreviation.sendKeys("AC" + i);
 		SCHOOLNAME = "Automation School " + i;
 		Name.sendKeys(SCHOOLNAME);
+		
 		SchoolDistrict.sendKeys("Automation District " + i);
 		Phone.sendKeys("9876543210");
+		
 		AddressLine1.sendKeys("Automation Address Line "+ i);
 		AddressLine2.sendKeys("Automation Address Line "+ i);
+		
 		TestUtil.selectDropdown(CountryDropDown, "United States");
 		TestUtil.selectDropdown(StateDropDown, "Alaska");
+		
 		City.sendKeys("Automation City "+ i);
 		ZipCode.sendKeys("901010");
+		
 		TestUtil.selectDropdown(TimeZonesDropDown, "(UTC-05:00) Eastern Time (US & Canada)");
 		TestUtil.selectDropdown(ProjectManagerDropDown, " Jack Reacher");		
+		
 		CreateButton.click();
 		
 		return new SchoolDetailsPage();
+	}
+	
+	public SchoolsPage clickCancelButton() {
+		CancelButton.click();
+		return new SchoolsPage();
+	}
+	
+	public boolean emptyFormCreateClick() {
+		boolean flag; 
+		CreateButton.click();
+		
+		boolean code = CodeError.isDisplayed();
+		boolean name = NameError.isDisplayed();
+		boolean state = StateError.isDisplayed();
+		if(code==true&&name==true&&state==true) {
+			System.out.println("All Error messages are displayed correctly");
+			flag = true;
+		}else {
+			System.out.println("Error Messages are not displayed for Code OR Name OR State");
+			flag = false;
+		}
+		return flag;
 	}
 
 }

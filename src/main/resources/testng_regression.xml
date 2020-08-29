@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>     <!-- Runner Class -->
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Elevate K-12 Application Test Automation Suit">
+
+<!--  parallel="classes" thread-count="2" -->
 	
 	<listeners>
 		<listener class-name="com.elevate.qa.ExtentReportListener.ExtentReporterNG" />
@@ -13,6 +15,7 @@
     <class name="com.elevate.qa.testCases.LMSDashboardTest"/>
     <class name="com.elevate.qa.testCases.ProgramsPageTest"/>
     <class name="com.elevate.qa.testCases.SchoolsPageTest"/>
+    <class name="com.elevate.qa.testCases.AddNewSchoolPageTest"/>
     </classes>
   </test> 
 </suite>
