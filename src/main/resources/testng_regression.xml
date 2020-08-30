@@ -6,6 +6,7 @@
 	
 	<listeners>
 		<listener class-name="com.elevate.qa.ExtentReportListener.ExtentReporterNG" />
+		<listener class-name="com.elevate.qa.Analyser.RetryTransformer" />
 	</listeners>
 
 

@@ -12,7 +12,7 @@ import com.elevate.qa.pages.ProgramsPage;
 import com.elevate.qa.pages.TechCheckReportsPage;
 
 
-public class LMSDashboardTest extends TestBase{
+public class LMSDashboardTest extends TestBase {
 	
 	LoginPage LoginPage;
 	LMSDashboard LMSDashboard;
