@@ -1,5 +1,6 @@
 package com.elevate.qa.testCases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +19,7 @@ public class LMSDashboardTest extends TestBase {
 	LMSDashboard LMSDashboard;
 	TechCheckReportsPage TechCheckReportsPage;
 	ProgramsPage ProgramsPage;
+	Logger log = Logger.getLogger(LMSDashboardTest.class);
 	
 	public LMSDashboardTest() {
 		super();

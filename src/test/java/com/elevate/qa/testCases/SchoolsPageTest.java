@@ -1,5 +1,6 @@
 package com.elevate.qa.testCases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,6 +21,8 @@ public class SchoolsPageTest extends TestBase{
 	SchoolsPage schoolsPage;
 	SchoolDetailsPage schoolDetailsPage;
 	SoftAssert softAssert;
+	
+	Logger log = Logger.getLogger(SchoolsPageTest.class);
 	
 	public SchoolsPageTest() {
 		super();

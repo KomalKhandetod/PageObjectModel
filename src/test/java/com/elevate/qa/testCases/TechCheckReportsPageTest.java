@@ -1,5 +1,6 @@
 package com.elevate.qa.testCases;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,6 +14,8 @@ public class TechCheckReportsPageTest {
 	}
 	
 	TechCheckReportsPage TechCheckReportsPage;	
+	
+	Logger log = Logger.getLogger(TechCheckReportsPageTest.class);
 	
 	
 	@BeforeMethod

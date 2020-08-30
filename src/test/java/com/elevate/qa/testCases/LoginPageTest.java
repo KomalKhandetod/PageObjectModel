@@ -1,5 +1,6 @@
 package com.elevate.qa.testCases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,7 @@ public class LoginPageTest extends TestBase {
 	
 	LoginPage LoginPage;
 	LMSDashboard LMSDashboard;
+	Logger log = Logger.getLogger(LoginPageTest.class);
 	
 	//To call TestBase Class Constructor use Super Keyword.
 	//This will be used to read all properties from config.properties file
@@ -22,6 +24,7 @@ public class LoginPageTest extends TestBase {
 	
 	@BeforeMethod
 	public void setup() {
+		log.info("****************************** Starting test case execution  *****************************************");
 		initialization();
 		LoginPage = new LoginPage();
 	}
@@ -45,6 +48,7 @@ public class LoginPageTest extends TestBase {
 	
 	@AfterMethod
 	public void tearDown() {
+		log.info("****************************** Browser is closed *****************************************");
 		driver.quit();		
 	}
 
