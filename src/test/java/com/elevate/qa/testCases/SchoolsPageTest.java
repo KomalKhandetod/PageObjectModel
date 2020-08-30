@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.elevate.qa.Base.TestBase;
 import com.elevate.qa.pages.AddNewSchoolPage;
@@ -18,6 +19,7 @@ public class SchoolsPageTest extends TestBase{
 	LMSDashboard lMSDashboard;
 	SchoolsPage schoolsPage;
 	SchoolDetailsPage schoolDetailsPage;
+	SoftAssert softAssert;
 	
 	public SchoolsPageTest() {
 		super();
@@ -28,6 +30,7 @@ public class SchoolsPageTest extends TestBase{
 		initialization();
 		loginPage = new LoginPage();
 		lMSDashboard = new LMSDashboard();
+		softAssert = new SoftAssert();
 		lMSDashboard = loginPage.adminLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
@@ -35,8 +38,9 @@ public class SchoolsPageTest extends TestBase{
 	public void verifySchoolPageLandingTest() {
 		schoolsPage = lMSDashboard.clickOnSchoolLink();
 		String SchoolPageTitle = driver.getTitle();
-		Assert.assertEquals(SchoolPageTitle, "Elevate Learning - Schools");
-		Assert.assertTrue(schoolsPage.schoolsLabel());
+		softAssert.assertEquals(SchoolPageTitle, "Elevate Learning - Schools");
+		softAssert.assertTrue(schoolsPage.schoolsLabel());
+		softAssert.assertAll();
 	}
 	
 	@Test(priority=2)
